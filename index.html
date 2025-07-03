@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <button id="darkModeToggle" title="Toggle dark mode">🌙</button>
+    <header>
+        <nav>
+            <a href="#" class="logo">abhattarai</a>
+            <button class="hamburger" id="hamburger-button" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-menu">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="email"><a href="mailto:abhattarai@unm.edu">abhattarai@unm.edu</a></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="social-orbit">
+            <div id="social-links">
+                <div class="code-card">
+                    <div class="code-header">
+                        <span class="code-dot red"></span>
+                        <span class="code-dot yellow"></span>
+                        <span class="code-dot green"></span>
+                    </div>
+                    <div class="code-body">
+                        <pre>
+                            <code>
+const SocialLinks = &#123;
+    <!-- Github: "<a href='https://github.com/blackkspydo'>github.com/blackkspydo</a>",
+    Twitter: "<a href='https://twitter.com/_blackkspydo'>twitter.com/_blackkspydo</a>",
+    Telegram: "<a href='https://t.me/blackkspydo'>t.me/blackkspydo</a>",
+    Codepen: "<a href='https://codepen.io/blackkspydo/'>codepen.io/blackkspydo</a>",
+    Instagram: "<a href='https://instagram.com/blackkspydo'>instagram.com/blackkspydo</a>", -->
+    LinkedIn: "<a href='https://linkedin.com/in/anuj-bhattarai'>linkedin.com/in/anuj-bhattarai</a>",
+    Email: "<a href='abhattarai@unm.edu'>abhattarai@unm.edu</a>",
+    <!-- Medium: "<a href='https://medium.com/@blackkspydo'>medium.com/@blackkspydo</a>" -->
+&#125;
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+            <div id="orbit-container">
+                <div class="orbit"> <!-- This is now the outer orbit -->
+                    <img src="https://cdn-icons-png.flaticon.com/128/226/226777.png" alt="Python" class="orbit-item" style="--rotation-angle: 45deg;">
+                    <img src="https://cdn-icons-png.flaticon.com/128/5968/5968350.png" alt="Figma" class="orbit-item" style="--rotation-angle: 90deg;">
+                    <img src="https://cdn-icons-png.flaticon.com/128/5968/5968705.png" alt="MongoDB" class="orbit-item" style="--rotation-angle: 135deg;">
+                    <img src="https://cdn-icons-png.flaticon.com/128/732/732190.png" alt="HTML" class="orbit-item" style="--rotation-angle: 180deg;">
+                </div>
+                <div class="orbit orbit-inner"> <!-- This is the new inner orbit -->
+                    <img src="https://cdn-icons-png.flaticon.com/128/5968/5968292.png" alt="CSS" class="orbit-item" style="--rotation-angle: 225deg;">
+                    <img src="https://cdn-icons-png.flaticon.com/128/174/174854.png" alt="LinkedIn" class="orbit-item" style="--rotation-angle: 270deg;">
+                    <img src="https://cdn-icons-png.flaticon.com/128/11865/11865326.png" alt="C++" class="orbit-item" style="--rotation-angle: 315deg;">
+                    <img src="https://cdn-icons-png.flaticon.com/128/6124/6124995.png" alt="Java" class="orbit-item" style="--rotation-angle: 360deg;">
+                </div>
+                <img src="https://www.winterclassicinvitational.com/wp-content/uploads/Anuj-Bhattarai-x300.png" alt="Profile" class="profile-pic">
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a creative developer and designer passionate about building beautiful and functional web applications.</p>
+        </section>
+
+        <section id="experience">
+            <h2>Work Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                   <div> <h3>Frontend Intern </h3>
+                    <p>Developed and maintained the user interface for a large Consulting Business.</p>
+                    </div>
+                     <img src="https://policy.unm.edu/common/images/unm-logo-full-vert-2019.png">
+                </div>
+                <div class="timeline-item">
+                   <div> <h3>App Developer Intern  </h3>
+                    <p>Built mobile applications for iOS and Android using React Native.</p>
+                    </div>
+                    <img src="https://da2nd.nm.gov/wp-content/uploads/2023/06/Logo-Alone-300x289.png">
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <img src="path/to/project1.jpg" alt="Project 1">
+                    <div class="project-card-content">
+                        <h3>Project 1</h3>
+                        <p>A web application built with React and Node.js.</p>
+                    </div>
+                    <div class="project-links">
+                        <a href="#">GitHub</a>
+                        <a href="#">Demo</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="path/to/project2.jpg" alt="Project 2">
+                    <div class="project-card-content">
+                        <h3>Project 2</h3>
+                        <p>A mobile application built with React Native.</p>
+                    </div>
+                    <div class="project-links">
+                        <a href="#">GitHub</a>
+                        <a href="#">Demo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="blogs">
+            <h2>Blogs</h2>
+            <p>Coming soon...</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <form>
+                <input type="email" placeholder="Your Email">
+                <textarea placeholder="Your Message"></textarea>
+                <button>Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Footer content -->
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

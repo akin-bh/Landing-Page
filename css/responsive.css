@@ -1,0 +1,132 @@
+/* css/responsive.css */
+
+/* 
+  We'll use a "desktop-first" approach, where we define styles for smaller screens
+  to override the default desktop styles. The breakpoints are common sizes for
+  tablets and phones.
+*/
+
+/* === Tablet Styles (e.g., iPads in landscape) === */
+@media (max-width: 1024px) {
+    /* Make the main content area less wide */
+    main {
+        padding: 0 40px;
+    }
+
+    /* Stack the social links and the orbit animation vertically */
+    #social-orbit {
+        /* Assuming #social-orbit is a flex container */
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        margin-left: 0; /* Reset desktop margin */
+        margin-top: 5rem; /* Reduce top margin for smaller screens */
+    }
+
+    #orbit-container {
+        transform: translateX(0); /* Reset desktop transform */
+    }
+
+    /* Make the project cards stack into a single column */
+    .projects-container {
+        /* Assuming this was a grid or flexbox layout */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center the cards when they stack */
+        gap: 30px;
+    }
+}
+
+/* === Mobile Styles (e.g., iPhones, iPads in portrait) === */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Slightly smaller base font for readability */
+    }
+
+    /* Prevent body from scrolling when nav menu is open */
+    body.nav-open {
+        overflow: hidden;
+    }
+
+    /* Give content a bit of space from the screen edges */
+    main {
+        padding: 0 20px;
+    }
+
+    /* --- Mobile Navigation --- */
+    .nav-menu {
+        /* This is now a slide-in side menu */
+        position: fixed;
+        top: 0;
+        right: -100%; /* Start off-screen */
+        width: 70vw; /* 70% of viewport width */
+        max-width: 320px;
+        height: 100vh; /* Full height */
+        background-color: rgba(255, 255, 255, 0.98);
+        box-shadow: -2px 0 10px rgba(0,0,0,0.15);
+        padding: 6rem 2rem 2rem; /* Padding to space out content */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        transition: right 0.3s ease-in-out;
+        z-index: 99; /* Below header/hamburger */
+    }
+
+    .nav-menu.is-active {
+        right: 0; /* Slide into view */
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: flex-start; /* Align links to the left */
+        gap: 1.5rem;
+        padding: 0;/*move default ul padding */
+        width: 100%;
+    }
+
+    .hamburger {
+        display: flex; /* Show the hamburger button */
+        z-index: 101; /* Make sure it's on top of the side menu */
+    }
+
+    /* Animate hamburger into an 'X' when active */
+    .hamburger.is-active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.is-active span:nth-child(2) { opacity: 0; }
+    .hamburger.is-active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -6px); }
+
+    /* Dark mode for mobile menu */
+    body.dark-mode .nav-menu {
+        background-color: rgba(26, 26, 26, 0.98);
+    }
+
+    /* Reposition dark mode toggle to the bottom-right on mobile */
+    #darkModeToggle {
+        top: auto;
+        bottom: 1.5rem;
+        right: 1.5rem;
+        left: auto;
+    }
+
+    /* Scale down the orbit animation so it fits on smaller screens */
+    #orbit-container {
+        transform: scale(0.5); /* Make it even smaller for phones */
+    }
+
+    /* Hide the social links card on mobile to save space */
+    #social-links {
+        display: none;
+    }
+
+    /* Stack the work experience items vertically */
+    .timeline-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .timeline-item img {
+        order: -1; /* Move the company logo above the job description */
+    }
+}
